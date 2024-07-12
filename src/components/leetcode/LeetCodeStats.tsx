@@ -181,13 +181,13 @@ export default function LeetCodeStats() {
                 </motion.div>
             )}
 
-<button
-  onClick={toggleStats}
-  className="fixed bottom-4 right-4 bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-lg z-40 flex items-center justify-center"
-  style={{ width: '3rem', height: '3rem' }}
->
-  <img src="./leetcodebutton.png" alt="LeetCode Data" className="h-6 w-6" />
-</button>
+           <button
+                onClick={toggleStats}
+                className="fixed bg-gray-700 hover:bg-gray-800 text-white rounded-full shadow-lg z-40 flex items-center justify-center"
+                style={{ width: '3rem', height: '3rem', top: '87%', left: '50%', transform: 'translate(-50%, -50%)' }}
+            >
+                <img src="./leetcodebutton.png" alt="LeetCode Data" className="h-6 w-6" />
+            </button>
 
 
         </>

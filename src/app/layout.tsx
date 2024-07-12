@@ -66,9 +66,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
           <FacebookMsg/>
+          <LeetCodeStats/>
             {children}
             <Navbar />
-            <LeetCodeStats/>
           </TooltipProvider>
         </ThemeProvider>
       </body>
