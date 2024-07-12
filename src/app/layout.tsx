@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import FacebookMsg from "@/components/FacebookMsg";
+import LeetCodeStats from "@/components/leetcode/LeetCodeStats";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -67,6 +68,7 @@ export default function RootLayout({
           <FacebookMsg/>
             {children}
             <Navbar />
+            <LeetCodeStats/>
           </TooltipProvider>
         </ThemeProvider>
       </body>

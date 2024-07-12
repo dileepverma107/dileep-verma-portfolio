@@ -1,0 +1,60 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(90deg, #8ebdbb, #5cda96, #4bc3cc);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #01B8A2;
+    }
+    33% {
+        border-color: #db2fdb;
+    }
+    66% {
+        border-color: #1f93ff;
+    }
+    100% {
+        border-color: #3b01b8;
+    }
+}
+
+.animated-border {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    animation: borderAnimation 3s infinite linear;
+    width: 56px; 
+    height: 56px; 
+}
+
+.button-with-shadow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    background-color: #A100FF;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(161, 0, 255, 0.5); /* Shadow with #A100FF color */
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-with-shadow:hover {
+    transform: translateY(-2px);
+}
