@@ -9,6 +9,7 @@ import Circle from "./ProgressCircle";
 import Questions from "./Questions";
 import SkeletonCard from './SkeletonCard';
 import { getUserProfile } from '../server/LeetCodeApi';
+import './style.css'; 
 
 export default function LeetCodeStats() {
     const [showStats, setShowStats] = useState(false);
@@ -54,7 +55,17 @@ export default function LeetCodeStats() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <Box display="flex" flexDirection="column" alignItems="center" sx={{ px: { xs: 2, sm: 0 } }}>
+                    <Box 
+                        display="flex" 
+                        flexDirection="column" 
+                        alignItems="center" 
+                        sx={{ 
+                            px: { xs: 2, sm: 0 },
+                            maxHeight: "90vh", // Limit height to fit within the viewport
+                            overflowY: "auto" // Enable vertical scrolling
+                        }}
+                        className="custom-scrollbar" // Apply custom scrollbar class
+                    >
                         <Card
                             sx={{
                                 background: `linear-gradient(135deg, #141414, #292829)`,
@@ -98,7 +109,10 @@ export default function LeetCodeStats() {
                                     height: { xs: "auto", sm: "334px" },
                                     position: "relative",
                                     padding: { xs: 2, sm: 0 },
+                                    maxHeight: "80vh", // Limit height to fit within the viewport
+                                    overflowY: "auto" // Enable vertical scrolling
                                 }}
+                                className="custom-scrollbar" // Apply custom scrollbar class
                             >
                                 <CardContent>
                                     <Box
@@ -188,8 +202,6 @@ export default function LeetCodeStats() {
             >
                 <img src="./leetcodebutton.png" alt="LeetCode Data" className="h-6 w-6" />
             </button>
-
-
         </>
     );
 }
